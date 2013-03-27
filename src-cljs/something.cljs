@@ -4,6 +4,8 @@
 ;  (js/jQuery )
 ;  )
 
+(js/setInterval  (.log js/console "here") 1000 )
+
 
 (defn bind-events [] (.click (js/jQuery ".hole")
                        (fn [this]
