@@ -1,10 +1,5 @@
 (ns whackmole)
 
-;(defn drawMole [index]
-;  (js/jQuery )
-;  )
-
-
 (def score (atom 0))
 
 (defn jq [arg] (js/jQuery arg))
