@@ -23,5 +23,5 @@
 
 (js/jQuery bind-events)
 
-(js/setInterval  (fn [] (mole-at (rand-int 4) ) ) 1000 )
+(js/setInterval  #(mole-at (rand-int 4)) 1000 )
 

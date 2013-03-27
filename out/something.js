@@ -15,8 +15,6 @@ return whackmole.jq.call(null,".hole").click((function (this$){
 if(cljs.core.truth_(whackmole.jq.call(null,this$.target).hasClass("holeWithMole")))
 {whackmole.jq.call(null,this$.target).removeClass("holeWithMole");
 cljs.core.swap_BANG_.call(null,whackmole.score,cljs.core.inc);
-whackmole.log.call(null,"the score is");
-whackmole.log.call(null,cljs.core.deref.call(null,whackmole.score));
 return whackmole.display_score.call(null,cljs.core.deref.call(null,whackmole.score));
 } else
 {return null;
