@@ -1,13 +1,3 @@
-# sample
+# WhackAMole
 
-A Clojure library designed to ... well, that part is up to you.
-
-## Usage
-
-FIXME
-
-## License
-
-Copyright © 2013 FIXME
-
-Distributed under the Eclipse Public License, the same as Clojure.
+Simple whack a mole app. Install clojurescript and then just execute compile.sh to compile the clojurescript to js.
