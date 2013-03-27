@@ -5,4 +5,10 @@ return jQuery(".hole").click((function (this$){
 return jQuery(this$.target).removeClass("holeWithMole");
 }));
 });
+whackmole.mole_at = (function mole_at(n){
+return jQuery(jQuery(".hole").get(n)).addClass("holeWithMole");
+});
 jQuery(whackmole.bind_events);
+jQuery((function (){
+return whackmole.mole_at.call(null,cljs.core.rand_int.call(null,4));
+}));

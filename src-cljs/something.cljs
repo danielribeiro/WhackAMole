@@ -11,5 +11,8 @@
 
                          )))
 
+(defn mole-at [n] (.addClass (js/jQuery (.get (js/jQuery ".hole") n)) "holeWithMole" ))
+
 (js/jQuery bind-events)
+(js/jQuery (fn [] (mole-at (rand-int 4) ) ))
 
