@@ -1,3 +1,8 @@
-goog.provide('base');
+goog.provide('whackmole');
 goog.require('cljs.core');
-cljs.core.println.call(null,"hey");
+whackmole.bind_events = (function bind_events(){
+return jQuery(".hole").click((function (this$){
+return jQuery(this$.target).removeClass("holeWithMole");
+}));
+});
+jQuery(whackmole.bind_events);
