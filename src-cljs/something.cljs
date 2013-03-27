@@ -12,16 +12,13 @@
 (defn log [arg] (.log js/console arg))
 
 (defn display-score [arg]
-  (.html (jq "#score") (str arg))
-  )
+  (.html (jq "#score") (str arg)))
 
 (defn bind-events [] (.click (jq ".hole")
                        (fn [this]
                          (when (.hasClass (jq (.-target this)) "holeWithMole" )
                             (.removeClass (jq (.-target this)) "holeWithMole" )
                             (swap! score inc)
-                            (log "the score is")
-                            (log @score)
                             (display-score @score)
                             )
 

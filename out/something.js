@@ -7,13 +7,17 @@ return jQuery(arg);
 whackmole.log = (function log(arg){
 return console.log(arg);
 });
+whackmole.display_score = (function display_score(arg){
+return whackmole.jq.call(null,"#score").html([cljs.core.str(arg)].join(''));
+});
 whackmole.bind_events = (function bind_events(){
 return whackmole.jq.call(null,".hole").click((function (this$){
 if(cljs.core.truth_(whackmole.jq.call(null,this$.target).hasClass("holeWithMole")))
 {whackmole.jq.call(null,this$.target).removeClass("holeWithMole");
 cljs.core.swap_BANG_.call(null,whackmole.score,cljs.core.inc);
 whackmole.log.call(null,"the score is");
-return whackmole.log.call(null,cljs.core.deref.call(null,whackmole.score));
+whackmole.log.call(null,cljs.core.deref.call(null,whackmole.score));
+return whackmole.display_score.call(null,cljs.core.deref.call(null,whackmole.score));
 } else
 {return null;
 }

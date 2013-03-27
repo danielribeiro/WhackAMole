@@ -12,8 +12,7 @@
             .hole {
                 width: 100px;
                 height: 100px;
-                background: red;
-                margin: 10px;
+                background: url("dirt.jpeg") no-repeat;
 
             }
 
@@ -22,9 +21,12 @@
 
             }
 
+            #score {
+                margin: 0 10px;
+            }
 
-            img {
-                width: 80px;
+            .scoreboard {
+                font-size: 20px;
             }
 
 
@@ -43,6 +45,6 @@
             <div class="hole"></div>
             <div class="hole"></div>
         </div>
-        <div>Score is <span id="score">0</span></div>
+        <div class="scoreboard">Score is <span id="score">0</span></div>
     </body>
 </html>
