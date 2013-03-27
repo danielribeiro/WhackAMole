@@ -5,14 +5,17 @@
 ;  )
 
 
+(def score 0)
 
-(defn bind-events [] (.click (js/jQuery ".hole")
+(defn jq [arg] (js/jQuery arg))
+
+(defn bind-events [] (.click (jq ".hole")
                        (fn [this]
-                         (.removeClass (js/jQuery (.-target this)) "holeWithMole" )
+                         (.removeClass (jq (.-target this)) "holeWithMole" )
 
                          )))
 
-(defn mole-at [n] (.addClass (js/jQuery (.get (js/jQuery ".hole") n)) "holeWithMole" ))
+(defn mole-at [n] (.addClass (jq (.get (jq ".hole") n)) "holeWithMole" ))
 
 (js/jQuery bind-events)
 
