@@ -1,9 +1,4 @@
-/target
-/lib
-/classes
-/checkouts
-pom.xml
-pom.xml.asc
+target
 *.jar
 *.class
 .lein-deps-sum
